@@ -14,18 +14,20 @@ function App() {
 
   return (
     <React.Fragment>
-      <AuthContext.Provider
+      {/* see index.js */}
+      {/* <AuthContext.Provider
         value={{
           isLoggedIn: false,
           onLogout: logoutHandler,
+          // We can also pass functions
         }}
-      >
-        <MainHeader />
-        <main>
-          {!ctx.isLoggedIn && <Login />}
-          {ctx.isLoggedIn && <Home />}
-        </main>
-      </AuthContext.Provider>
+      > */}
+      <MainHeader />
+      <main>
+        {!ctx.isLoggedIn && <Login />}
+        {ctx.isLoggedIn && <Home />}
+      </main>
+      {/* </AuthContext.Provider> */}
     </React.Fragment>
   );
 }
