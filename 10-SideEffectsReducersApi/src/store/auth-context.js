@@ -7,6 +7,8 @@ const AuthContext = React.createContext({
   onLogin: (email, password) => {},
 });
 
+// We pull more logic out of the App component and create a separate Context Management component.
+// I export this AuthContextProvider.
 export const AuthContextProvider = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -28,6 +30,7 @@ export const AuthContextProvider = (props) => {
     setIsLoggedIn(true);
   };
 
+  // we pass props.children, i.e. whatever we got on props.children between our provider.
   return (
     <AuthContext.Provider
       value={{
