@@ -1,9 +1,9 @@
 import { useRef, useContext } from "react";
 
 import { TodosContext } from "../store/todos-context";
-import classes from "./NewTodo.module.css";
+import classes from "./NewTodo.modules.css";
 
-//NexTodo
+//NexTodo : FC means Function Component
 const NewTodo: React.FC = () => {
   const todosCtx = useContext(TodosContext);
 
