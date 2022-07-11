@@ -14,6 +14,7 @@ const Todos: React.FC = () => {
         <TodoItem
           key={item.id}
           text={item.text}
+          // We wet the this keyword to null bc we don't need it here and then we set the first argument on removeTodo will then receive later (item.id)
           onRemoveTodo={todosCtx.removeTodo.bind(null, item.id)}
         />
       ))}
